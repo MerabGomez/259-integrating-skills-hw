@@ -44,6 +44,9 @@ cities <- c("Charlotte", "Los Angeles", "Houston", "Indianapolis", "Jacksonville
 #> Call the function "read_weather" 
 #> Check by reading/glimpsing a single station's file
 
+#Frankly, we had a lot of trouble with this homework#
+#To the point of spending days trying to figure out#
+#we asked Mohammed for help and this is the code he gave us but we don't even have a clue if it worked#
 
 library(stringr)
 list_of_files <- list.files(path = "us-weather-history",
@@ -110,6 +113,8 @@ compiled_data <- read.csv('data-clean/compiled_data.csv')
 #> (Seattle, 20, Charlotte 12, Phoenix 12, etc...)
 #> Don't save this summary over the original dataset!
 
+#Once again, completely lost#
+#we basically made whatever code we thought would work for the remainder of the assignment but we honestly don't know if it works#
 receordtemps <- .%>%
   count(actual_min_temp == record_min_temp, record_max_temp==record_max_temp)
 recordtemps(compiled_data)
@@ -210,3 +215,5 @@ newplot <- ggplot(compiled_data, aes(x = date, y = actual_mean_temp)) + geom_poi
 ggsave("eda/month_name.png", plot = newplot)
 
 map(compiled_data, plots_temp_date)
+
+#sorry again, this pretty bad#
